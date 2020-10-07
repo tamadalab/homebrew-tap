@@ -5,10 +5,11 @@ Homebrew recipes of products made by the members of Tamada-lab, KSU.
 Available products
 * [kani](https://github.com/ma-sa321/kani)
 
-To use the products through homebrew, simply run 
+To use the products through homebrew, simply run the following commands.
 
 ```sh
-$ brew install tamadalab/brew/PRODUCT_NAME
+$ brew tap tamadalab/brew   # <-- at the first time only.
+$ brew install PRODUCT_NAME
 ```
 
 
