@@ -9,7 +9,7 @@ class Kani < Formula
   license ""
   # 将来的には tag を付けた方が良い．URLは自分のものに置き換えてください．
   # url "https://github.com/ma-sa321/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
-  url "https://github.com/tamada/kani.git", :branch => "tamada"
+  url "https://github.com/ma-sa321/kani.git", :branch => "fix_cmd"
   version HOMEBREW_KANI_VERSION
   head "https://github.com/ma-sa321/kani.git"
 
@@ -19,7 +19,7 @@ class Kani < Formula
   def install
     ENV['GOPATH'] = buildpath
     ENV['GO111MODULE'] = 'on'
-    kani_path = buildpath/"src/github.com/tamada/kani/"
+    kani_path = buildpath/"src/github.com/ma-sa321/kani/"
     kani_path.install buildpath.children
 
     cd kani_path do
