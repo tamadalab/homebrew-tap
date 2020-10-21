@@ -7,7 +7,7 @@ class Purplecat < Formula
   license "WTFPL"
   url "https://github.com/tamadalab/purplecat/releases/download/v#{HOMEBREW_PURPLECAT_VERSION}/purplecat-#{HOMEBREW_PURPLECAT_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_PURPLECAT_VERSION
-  sha256 "e7b4397aa8d6ae2296455832efaad24089454475ac1cfacdc3cd4bde2864c068"
+  sha256 "5a09f5a057a3082c44190af123dc2b9ccbcefc57a5b3d3f424e5832ee66d8889"
 
   def install
     bin.install "bin/purplecat"
