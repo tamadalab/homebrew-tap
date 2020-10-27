@@ -9,7 +9,7 @@ class Kani < Formula
   license ""
   # 将来的には tag を付けた方が良い．URLは自分のものに置き換えてください．
   # url "https://github.com/ma-sa321/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
-  url "https://github.com/ma-sa321/kani.git", :branch => "master"
+  url "https://github.com/ma-sa321/kani.git", :branch => "main"
   version HOMEBREW_KANI_VERSION
   head "https://github.com/ma-sa321/kani.git"
 
