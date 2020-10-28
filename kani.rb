@@ -2,16 +2,13 @@
 HOMEBREW_KANI_VERSION = "1.0.0"
 
 class Kani < Formula
-  # 簡単に何を行っているのかを書いてください．
-  desc ""
-  homepage "https://github.com/ma-sa321/kani"
-  # ライセンスを決めましょう．適当に決めてもらってOKです．
-  license ""
-  # 将来的には tag を付けた方が良い．URLは自分のものに置き換えてください．
-  # url "https://github.com/ma-sa321/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
-  url "https://github.com/tamada/kani.git", :branch => "tamada"
+  desc "これは，git初心者向けのcommitを促す補助ツールになります．git addされる前とのファイル編集行と，コマンド操作時の連続エラー発生回数によってcommitを促すか否かを判別するツールです．促すべきと判断した場合，git addやstatusなどの説明をターミナル上に簡易に表示します．"
+  homepage "https://github.com/tamadalab/kani"
+  license "CC0"
+  # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
+  url "https://github.com/tamadalab/kani.git", :branch => "master"
   version HOMEBREW_KANI_VERSION
-  head "https://github.com/ma-sa321/kani.git"
+  head "https://github.com/tamadalab/kani.git"
 
   depends_on "git"
   depends_on "go"    => :build
@@ -19,7 +16,7 @@ class Kani < Formula
   def install
     ENV['GOPATH'] = buildpath
     ENV['GO111MODULE'] = 'on'
-    kani_path = buildpath/"src/github.com/tamada/kani/"
+    kani_path = buildpath/"src/github.com/tamadalab/kani/"
     kani_path.install buildpath.children
 
     cd kani_path do
