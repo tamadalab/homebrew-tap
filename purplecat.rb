@@ -7,7 +7,7 @@ class Purplecat < Formula
   license "WTFPL"
   url "https://github.com/tamadalab/purplecat/releases/download/v#{HOMEBREW_PURPLECAT_VERSION}/purplecat-#{HOMEBREW_PURPLECAT_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_PURPLECAT_VERSION
-  sha256 "dcfc80103c79e06affe2bb4668867369a0debb2d7ca1c56b961444d5a9e1f86a"
+  sha256 "49f8ece7bebe3a1ae0a36779f2145e1196d4c0d02e24de4aa64e3459ab91ba80"
 
   def install
     prefix.install "README.md"
