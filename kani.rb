@@ -2,9 +2,9 @@
 HOMEBREW_KANI_VERSION = "1.0.0"
 
 class Kani < Formula
-  desc "これは，git初心者向けのcommitを促す補助ツールになります．git addされる前とのファイル編集行と，コマンド操作時の連続エラー発生回数によってcommitを促すか否かを判別するツールです．促すべきと判断した場合，git addやstatusなどの説明をターミナル上に簡易に表示します．"
+  desc "This tool supports git/GitHub operations for the novice developers on the shell."
   homepage "https://github.com/tamadalab/kani"
-  license "CC0"
+  license "CC0-1.0"
   # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
   url "https://github.com/tamadalab/kani.git", :branch => "master"
   version HOMEBREW_KANI_VERSION
@@ -20,19 +20,19 @@ class Kani < Formula
     kani_path.install buildpath.children
 
     cd kani_path do
-      system "go", "build", "-o", "bin/git-kani", "git-kani.go"
-      bin.install "bin/git-kani"
+      system "go", "build", "-o", "bin/kani", "git-kani.go"
+      bin.install "bin/kani"
       prefix.install "README.md"
-      ## ライセンスファイルを用意して，以下のコメントを外しましょう．
-      # opt.install "LICENSE"
       prefix.install "scripts"
       prefix.install "analyses"
+      prefix.install "resources"
+      opt.install "LICENSE"
     end
   end
 
   def caveats
     <<~EOS
-      To activate kani, execute the following snippet in your ~/.zshrc.
+      To activate kani, execute the following snippet in your ~/.zshrc or ~/.bashrc.
 
         eval \"$(git kani init -)\"
     EOS
