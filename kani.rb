@@ -26,7 +26,7 @@ class Kani < Formula
       prefix.install "scripts"
       prefix.install "analyses"
       prefix.install "resources"
-      opt.install "LICENSE"
+      prefix.install "LICENSE"
     end
   end
 
@@ -34,7 +34,7 @@ class Kani < Formula
     <<~EOS
       To activate kani, execute the following snippet in your ~/.zshrc or ~/.bashrc.
 
-        eval \"$(git kani init -)\"
+        eval \"$(kani init -)\"
     EOS
   end
 end
