@@ -1,32 +1,25 @@
 # coding: utf-8
-HOMEBREW_KANI_VERSION = "1.0.0"
+HOMEBREW_KANI_VERSION = "1.0.1"
 
 class Kani < Formula
   desc "This tool supports git/GitHub operations for the novice developers on the shell."
   homepage "https://github.com/tamadalab/kani"
   license "CC0-1.0"
   # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
-  url "https://github.com/tamadalab/kani.git", :branch => "master"
+  url "https://github.com/tamadalab/purplecat/releases/download/v#{HOMEBREW_KANI_VERSION}/purplecat-#{HOMEBREW_KANI_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_KANI_VERSION
-  head "https://github.com/tamadalab/kani.git"
+  sha256 "b6695e74bc7b6e313b0e295d88fec5c577eb0e198da66beba2640aa7e0adc7ca"
 
   depends_on "git"
-  depends_on "go"    => :build
 
   def install
-    ENV['GOPATH'] = buildpath
-    ENV['GO111MODULE'] = 'on'
-    kani_path = buildpath/"src/github.com/tamadalab/kani/"
-    kani_path.install buildpath.children
-
-    cd kani_path do
-      system "go", "build", "-o", "bin/kani", "git-kani.go"
       bin.install "bin/kani"
       prefix.install "README.md"
-      prefix.install "scripts"
+      prefix.install "LICENSE"
       prefix.install "analyses"
       prefix.install "resources"
-      prefix.install "LICENSE"
+      prefix.install "scripts"
+      prefix.install "docs"
     end
   end
 
