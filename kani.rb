@@ -8,7 +8,7 @@ class Kani < Formula
   # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
   url "https://github.com/tamadalab/kani/releases/download/v#{HOMEBREW_KANI_VERSION}/kani-#{HOMEBREW_KANI_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_KANI_VERSION
-  sha256 "b6695e74bc7b6e313b0e295d88fec5c577eb0e198da66beba2640aa7e0adc7ca"
+  sha256 "a916a633b7ad2cc8f1f98134eab2b92f28fe9e314ee9511f0f32aab6a185fe2e"
 
   depends_on "git"
 
