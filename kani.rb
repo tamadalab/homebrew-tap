@@ -13,14 +13,13 @@ class Kani < Formula
   depends_on "git"
 
   def install
-      bin.install "bin/kani"
-      prefix.install "README.md"
-      prefix.install "LICENSE"
-      prefix.install "analyses"
-      prefix.install "resources"
-      prefix.install "scripts"
-      prefix.install "docs"
-    end
+    bin.install "bin/kani"
+    prefix.install "README.md"
+    prefix.install "LICENSE"
+    prefix.install "analyses"
+    prefix.install "resources"
+    prefix.install "scripts"
+    prefix.install "docs"
   end
 
   def caveats
