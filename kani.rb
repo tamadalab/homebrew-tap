@@ -6,7 +6,7 @@ class Kani < Formula
   homepage "https://github.com/tamadalab/kani"
   license "CC0-1.0"
   # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
-  url "https://github.com/tamadalab/kani/releases/download/v#{HOMEBREW_KANI_VERSION}/purplecat-#{HOMEBREW_KANI_VERSION}_darwin_amd64.tar.gz"
+  url "https://github.com/tamadalab/kani/releases/download/v#{HOMEBREW_KANI_VERSION}/kani-#{HOMEBREW_KANI_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_KANI_VERSION
   sha256 "b6695e74bc7b6e313b0e295d88fec5c577eb0e198da66beba2640aa7e0adc7ca"
 
