@@ -1,5 +1,5 @@
 # coding: utf-8
-HOMEBREW_KANI_VERSION = "1.2.0"
+HOMEBREW_KANI_VERSION = "1.2.1"
 
 class Kani < Formula
   desc "This tool supports git/GitHub operations for the novice developers on the shell."
@@ -8,7 +8,7 @@ class Kani < Formula
   # url "https://github.com/tamadalab/kani.git", :tag => "v#{HOMEBREW_KANI_VERSION}"
   url "https://github.com/tamadalab/kani/releases/download/v#{HOMEBREW_KANI_VERSION}/kani-#{HOMEBREW_KANI_VERSION}_darwin_amd64.tar.gz"
   version HOMEBREW_KANI_VERSION
-  sha256 "d98fd1828c05b450f1a406d97e83b9212b7ed7a00db7e7cc4bdf29c7d17dd63e"
+  sha256 "89e2fa1923024e7501df32944f8b38b2a853d1b2a1bd0c96110e0ddb15c228c6"
 
   depends_on "git"
   depends_on "bash-preexec"
