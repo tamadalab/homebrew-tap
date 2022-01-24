@@ -12,7 +12,7 @@ class Nulete < Formula
   def install
     prefix.install "README.md"
     prefix.install "LICENSE"
-    prefix.install "docs"
+    prefix.install "doc"
     bin.install "bin/nulete"
   end
 end
